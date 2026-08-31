@@ -1,0 +1,152 @@
+.hero {
+  min-height: 100vh;
+  padding: 0 5%;
+}
+
+/* NAVIGATION */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 5%;
+  right: 5%;
+  z-index: 1000;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: var(--border);
+  background: var(--background);
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  position: relative;
+  font-size: 20px;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 0.5px;
+  background: #000;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+}
+
+/* HERO */
+
+.hero-content {
+  min-height: calc(100vh - 90px);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-year {
+  margin-top: 120px;
+  font-size: 14px;
+  text-align: end;
+}
+
+.hero-title {
+  position: relative;
+  margin-top: auto;
+  isolation: isolate;
+}
+
+.hero-title h1 {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  font-size: clamp(90px, 11vw, 190px);
+  font-weight: 400;
+  line-height: 0.9;
+  text-align: end;
+}
+
+.hero-title h1 span {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.lavender-shape {
+  position: absolute;
+  z-index: -1;
+  width: 115%;
+  height: 150%;
+  right: -25%;
+  bottom: 15%;
+  background: var(--lavender);
+  border-radius: 72% 28% 65% 35% / 35% 62% 38% 65%;
+  opacity: 0;
+  transform: rotate(-8deg);
+  animation:
+    lavenderReveal 5s ease-out forwards,
+    lavenderFloat 22s ease-in-out 5s infinite alternate;
+}
+
+@keyframes lavenderReveal {
+  from {
+    opacity: 0;
+    transform: scale(0.7) translate(8%, 10%);
+  }
+
+  to {
+    opacity: 0.65;
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+@keyframes lavenderReveal {
+  from {
+    opacity: 0;
+    transform: translate(15%, 15%) rotate(-12deg) scale(0.65);
+  }
+
+  to {
+    opacity: 0.65;
+    transform: translate(0, 0) rotate(-8deg) scale(1);
+  }
+}
+
+@keyframes lavenderFloat {
+  0% {
+    transform: translate(0, 0) rotate(-8deg) scale(1);
+
+    border-radius: 72% 28% 65% 35% / 35% 62% 38% 65%;
+  }
+
+  50% {
+    transform: translate(-3%, -2%) rotate(-5deg) scale(1.05);
+
+    border-radius: 55% 45% 78% 22% / 65% 32% 68% 35%;
+  }
+
+  100% {
+    transform: translate(2%, 3%) rotate(-10deg) scale(0.98);
+
+    border-radius: 35% 65% 42% 58% / 28% 72% 45% 55%;
+  }
+}
+
+.divider {
+  width: 100%;
+  border-bottom: var(--border);
+}

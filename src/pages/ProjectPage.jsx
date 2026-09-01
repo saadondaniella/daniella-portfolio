@@ -1,31 +1,114 @@
-import { useParams } from "react-router-dom";
+import { useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
 import projects from "../data/projects";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import "./ProjectPage.css";
 
 function ProjectPage() {
   const { slug } = useParams();
 
   const project = projects.find((project) => project.slug === slug);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
+
+  if (!project) {
+    return (
+      <>
+        <Navbar />
+
+        <main className="project-page">
+          <section className="project-hero">
+            <h1>Project not found</h1>
+          </section>
+        </main>
+
+        <Footer />
+      </>
+    );
+  }
+
   return (
-    <main className="project-page">
-      <section className="project-hero">
-        <a href="/#projects" className="project-back">
-          ← Projects
-        </a>
+    <>
+      <Navbar />
 
-        <div className="project-title">
-          <h1>{project.title}</h1>
+      <main className="project-page">
+        <section className="project-hero">
+          <Link to="/#projects" className="project-back">
+            ← Projects
+          </Link>
 
-          <p className="project-meta">2026 · Mobile & Desktop</p>
-        </div>
+          <div className="project-title">
+            <h1>{project.title}</h1>
 
-        <div className="divider"></div>
+            <p className="project-meta">
+              {project.year} &nbsp;&nbsp;&nbsp; {project.type}{" "}
+              &nbsp;&nbsp;&nbsp;
+              {project.course}
+            </p>
+          </div>
 
-        <div className="project-cover">
-          <img src={project.image} alt={project.title} />
-        </div>
-      </section>
-    </main>
+          <div className="divider"></div>
+
+          <div className="project-cover">
+            <img src={project.image} alt={project.title} />
+          </div>
+
+          <section className="project-overview">
+            <div className="overview-text">
+              <p className="project-label">Overview</p>
+
+              <p className="overview-description">{project.overview}</p>
+            </div>
+
+            <div className="overview-details">
+              <div>
+                <p className="project-label">Technologies</p>
+
+                <ul className="technology-list">
+                  {project.technologies.map((technology) => (
+                    <li key={technology}>{technology}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="project-links">
+                <p className="project-label">Links</p>
+
+                {project.url && (
+                  <a href={project.url} target="_blank" rel="noreferrer">
+                    Live website →
+                  </a>
+                )}
+
+                {project.repo && (
+                  <a href={project.repo} target="_blank" rel="noreferrer">
+                    GitHub repository →
+                  </a>
+                )}
+              </div>
+            </div>
+          </section>
+
+          {project.mobileImages && (
+            <section className="project-mobile-images">
+              {project.mobileImages.map((image, index) => (
+                <div className="mobile-image" key={image}>
+                  <img
+                    src={image}
+                    alt={`${project.title} mobile view ${index + 1}`}
+                  />
+                </div>
+              ))}
+            </section>
+          )}
+        </section>
+      </main>
+
+      <Footer />
+    </>
   );
 }
 

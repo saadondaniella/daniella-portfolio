@@ -1,0 +1,61 @@
+.project-card {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+
+  gap: 60px;
+
+  align-items: center;
+
+  margin-bottom: 120px;
+}
+
+.project-image {
+  width: 100%;
+
+  overflow: hidden;
+}
+
+.project-image img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+}
+
+.project-info {
+  margin: 0;
+}
+
+.project-info h3 {
+  margin: 0 0 14px;
+
+  font-size: clamp(32px, 3vw, 52px);
+  font-weight: 400;
+}
+
+.project-info p {
+  margin: 8px 0 0;
+}
+
+.project-technologies {
+  margin-top: 24px;
+
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .project-card {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+
+    margin-bottom: 70px;
+  }
+
+  .project-info h3 {
+    font-size: 30px;
+  }
+}

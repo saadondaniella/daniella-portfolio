@@ -1,0 +1,105 @@
+.contact {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 60px 5%;
+}
+
+.contact-left,
+.contact-right {
+  height: 60vh;
+}
+
+.contact-left {
+  position: relative;
+  background: var(--lavender);
+}
+
+.contact-links {
+  position: absolute;
+  left: 28px;
+  bottom: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contact-links a {
+  position: relative;
+  font-size: clamp(60px, 6.5vw, 105px);
+  line-height: 0.95;
+  text-decoration: none;
+  color: #000;
+}
+
+.contact-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: #000;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.contact-links a:hover::after {
+  transform: scaleX(1);
+}
+
+.contact-link-italic {
+  font-style: italic;
+}
+
+.contact-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.contact-right img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 40px 5%;
+    align-items: stretch;
+  }
+
+  .contact-left,
+  .contact-right {
+    height: auto;
+    min-height: 0;
+  }
+
+  .contact-right img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .contact-left {
+    position: relative;
+    background: var(--lavender);
+  }
+
+  .contact-links {
+    position: absolute;
+    left: 14px;
+    bottom: 14px;
+  }
+
+  .contact-links a {
+    font-size: clamp(24px, 8vw, 40px);
+  }
+}

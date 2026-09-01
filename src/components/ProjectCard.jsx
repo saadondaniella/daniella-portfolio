@@ -1,21 +1,21 @@
 import "./ProjectCard.css";
+import { Link } from "react-router-dom";
 
-function ProjectCard({ title, description, technologies, image }) {
+function ProjectCard({ slug, title, description, technologies, image }) {
   return (
     <article className="project-card">
-      <div className="project-image">
-        <img src={image} alt={title} />
-      </div>
+      <Link to={`/projects/${slug}`} className="project-card-link">
+        <div className="project-image">
+          <img src={image} alt={title} />
+        </div>
 
-      <div className="project-info">
-        <h3>{title}</h3>
+        <div className="project-info">
+          <h3>{title}</h3>
+          <p>{description}</p>
 
-        <p>{description}</p>
-
-        <p className="project-technologies">
-          {technologies.join("\u00A0 · \u00A0")}
-        </p>
-      </div>
+          <p className="project-technologies">{technologies.join(" · ")}</p>
+        </div>
+      </Link>
     </article>
   );
 }

@@ -1,4 +1,4 @@
-import achiCover from "../assets/projects/house-of-achi/Achi.png";
+import achiCover from "../assets/projects/house-of-achi/achi.png";
 import capitalQuizCover from "../assets/projects/capital-quiz/capitalquiz.png";
 import couplesTherapyCover from "../assets/projects/parterapi/couplestherapy.png";
 import yrgopelagCover from "../assets/projects/yrgopelag/yrgopelag.png";

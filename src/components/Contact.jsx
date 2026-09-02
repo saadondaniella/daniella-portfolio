@@ -1,5 +1,5 @@
 import "./Contact.css";
-import daniellaPortrait from "../assets/Daniella.JPG";
+import daniellaPortrait from "../assets/Daniella.jpg";
 
 function Contact() {
   return (

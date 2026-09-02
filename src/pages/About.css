@@ -1,0 +1,177 @@
+.about-page {
+  padding-top: 90px;
+}
+
+.about-section {
+  padding: 70px 5% 0;
+}
+
+.about-section h1 {
+  margin: 0 0 20px;
+  font-size: clamp(48px, 6vw, 90px);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.about-section h1 span {
+  font-style: italic;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 80px;
+  width: 100%;
+  min-height: 80vh;
+  margin: 70px 0 0;
+  align-items: start;
+}
+
+.about-text {
+  max-width: 650px;
+}
+
+.about-text p {
+  margin: 0 0 24px;
+  font-size: 1.1rem;
+  line-height: 1.45;
+}
+
+.about-image {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.about-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    padding-top: 70px;
+  }
+
+  .about-section {
+    padding: 40px 5% 0;
+  }
+
+  .about-section h1 {
+    font-size: clamp(42px, 13vw, 58px);
+    line-height: 0.95;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-text p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .about-image {
+    width: 100%;
+    height: 360px;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.education {
+  margin-top: 110px;
+  padding-bottom: 120px;
+  scroll-margin-top: 110px;
+}
+
+.education .project-label {
+  margin-bottom: 16px;
+}
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.education-item {
+  padding: 32px 0;
+  border-bottom: var(--border);
+}
+
+.education-year {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.education-item h2 {
+  margin: 0 0 8px;
+  font-size: clamp(34px, 4vw, 56px);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.education-item p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.education-toggle {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding: 5px 9px;
+  border: 0;
+  background: var(--lavender);
+  color: #000;
+  font: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.education-details > p {
+  max-width: 1000px;
+}
+
+.education-courses {
+  margin-top: 16px;
+}
+@media (max-width: 768px) {
+  .education {
+    margin-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .education-item {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-items: start;
+    padding: 26px 0;
+  }
+
+  .education-item h2 {
+    font-size: 32px;
+  }
+
+  .education-year,
+  .education-item p,
+  .education-toggle {
+    font-size: 0.95rem;
+  }
+}

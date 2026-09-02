@@ -11,9 +11,9 @@ function Navbar() {
         </a>
 
         <nav className="nav-links">
-          <a href="/#education">Education</a>
           <a href="/#projects">Projects</a>
-          <a href="/#about">About</a>
+          <a href="/about">About</a>
+          <a href="/about#education">Education</a>
           <a href="/#contact">Contact</a>
         </nav>
 
@@ -29,16 +29,15 @@ function Navbar() {
 
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
         <nav>
-          <a href="/#education" onClick={() => setMenuOpen(false)}>
-            Education
-          </a>
-
           <a href="/#projects" onClick={() => setMenuOpen(false)}>
             Projects
           </a>
 
-          <a href="/#about" onClick={() => setMenuOpen(false)}>
+          <a href="/about" onClick={() => setMenuOpen(false)}>
             About
+          </a>
+          <a href="/about#education" onClick={() => setMenuOpen(false)}>
+            Education
           </a>
 
           <a href="/#contact" onClick={() => setMenuOpen(false)}>

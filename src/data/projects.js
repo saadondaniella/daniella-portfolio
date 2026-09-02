@@ -10,6 +10,9 @@ import couplesTherapyPhone1 from "../assets/projects/parterapi/parterapi-phone1.
 import couplesTherapyPhone2 from "../assets/projects/parterapi/parterapi-phone2.png";
 import capitalQuizPhone1 from "../assets/projects/capital-quiz/capitalquiz-phone1.png";
 import capitalQuizPhone2 from "../assets/projects/capital-quiz/capitalquiz-phone2.png";
+import cosmoSphereCover from "../assets/projects/cosmo-sphere/cosmosphere.png";
+import cosmoSpherePhone1 from "../assets/projects/cosmo-sphere/cosmosphere-phone1.png";
+import cosmoSpherePhone2 from "../assets/projects/cosmo-sphere/cosmosphere-phone2.png";
 
 const projects = [
   {
@@ -17,7 +20,7 @@ const projects = [
     slug: "house-of-achi",
     title: "House Of Achi",
     description:
-      "A project I took on outside of my studies, combining development, design and visual storytelling for a Gothenburg experience studio.",
+      "A project I took on alongside my studies for a newly started creative studio with one goal to creating experiences people won’t forget.",
     year: "2026",
     type: "Mobile & Desktop",
     course: "Independent client project",
@@ -35,7 +38,7 @@ const projects = [
     slug: "capital-quiz",
     title: "Capital Quiz",
     description:
-      "A team project where React met C# — and our geography knowledge was put to the test.",
+      "Guess the capital, get a point. Sounds simple enough! But the code behind it had other plans.",
     year: "2026",
     type: "Mobile & Desktop",
     course: "Programming (C#)",
@@ -54,7 +57,7 @@ const projects = [
     slug: "yrgopelag",
     title: "Yrgopelag",
     description:
-      "A full-stack hotel booking project where bookings, data and business logic all had to work together.",
+      "We got an island, some play money and the freedom to open our own fictional hotel, then had to make sure our classmates could actually book a stay.",
     year: "2026",
     type: "Desktop",
     course: "Programming",
@@ -73,9 +76,8 @@ const projects = [
     id: 4,
     slug: "couples-therapy",
     title: "Couples Therapy",
-
     description:
-      "A multiplayer memory game built around real-time collaboration, scoring and a 3D game board.",
+      "Couples therapy, but make it a memory game. Flip the cards, find the matches and discover what your partner has been hiding.",
     year: "2026",
     type: "Desktop",
     course: "Web Frameworks",
@@ -88,6 +90,26 @@ const projects = [
       "The game uses real-time state handling and scoring logic, with a 3D board built using Three.js.",
     image: couplesTherapyCover,
     mobileImages: [couplesTherapyPhone1, couplesTherapyPhone2],
+  },
+  {
+    id: 5,
+    slug: "cosmo-sphere",
+    title: "Cosmo Sphere",
+    description:
+      "A chance to let our creativity run wild and turn a fictional cinema into its own little sci-fi universe.",
+    year: "2025",
+    type: "Mobile & Desktop",
+    course: "Digital Design",
+
+    technologies: ["Figma", "PHP", "JavaScript", "HTML", "CSS"],
+
+    url: "https://developedbydaniella.se/cosmo-sphere/",
+
+    overview:
+      "Cosmo Sphere is a fictional sci-fi cinema created during our Digital Design course, where the main focus was on visual identity and the design process. We developed the concept from the ground up, starting with the visual direction and designing the website in Figma before bringing it to life through code. We wanted the website to feel like its own little sci-fi universe rather than a traditional cinema website, using typography, imagery, colour and motion to build the atmosphere. The final website was developed from our Figma designs, with details such as an animated starry background adding another layer to the experience.",
+
+    image: cosmoSphereCover,
+    mobileImages: [cosmoSpherePhone1, cosmoSpherePhone2],
   },
 ];
 

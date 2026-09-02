@@ -10,6 +10,10 @@ function ProjectPage() {
 
   const project = projects.find((project) => project.slug === slug);
 
+  const currentIndex = projects.findIndex((item) => item.slug === slug);
+
+  const nextProject = projects[(currentIndex + 1) % projects.length];
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [slug]);
@@ -104,6 +108,16 @@ function ProjectPage() {
               ))}
             </section>
           )}
+          <section className="next-project">
+            <p className="project-label">Next project</p>
+
+            <Link
+              to={`/projects/${nextProject.slug}`}
+              className="next-project-link"
+            >
+              {nextProject.title}
+            </Link>
+          </section>
         </section>
       </main>
 

@@ -348,6 +348,7 @@
   font-size: 16px;
   border-bottom: var(--border);
 }
+
 @media (max-width: 768px) {
   .intro {
     grid-template-columns: 1fr;
@@ -359,5 +360,8 @@
   .intro-right {
     max-width: none;
     justify-self: stretch;
+  }
+  .projects {
+    padding: 60px 5% 20px;
   }
 }

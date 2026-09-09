@@ -64,6 +64,41 @@ function About() {
             </div>
           </div>
 
+          <section className="cv-section">
+            <p className="project-label">CV</p>
+
+            <div className="divider"></div>
+
+            <div className="cv-content">
+              <div>
+                <h2>Want the short version?</h2>
+
+                <p>
+                  You can view my CV in English or Swedish. Both open as PDFs in
+                  a new tab, where you can download or print them if needed.
+                </p>
+              </div>
+
+              <div className="cv-links">
+                <a
+                  href="/cv/daniella-saadon-cv-en.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  English CV ↗
+                </a>
+
+                <a
+                  href="/cv/daniella-saadon-cv-sv.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Swedish CV ↗
+                </a>
+              </div>
+            </div>
+          </section>
+
           <section className="education" id="education">
             <p className="project-label">Education</p>
 
@@ -169,7 +204,7 @@ function About() {
                       while Canva was part of our everyday workflow for visual
                       communication and content creation.
                     </p>
-<br></br>
+                    <br></br>
                     <p>
                       Alongside the creative work, we learned about visual
                       merchandising, campaigns, branding and the business side

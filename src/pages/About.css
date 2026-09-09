@@ -93,6 +93,50 @@
   }
 }
 
+.cv-section {
+  margin-top: 110px;
+}
+
+.cv-section .project-label {
+  margin-bottom: 16px;
+}
+
+.cv-content {
+  display: block;
+  padding: 40px 0;
+}
+
+.cv-content h2 {
+  margin: 0 0 16px;
+  font-size: clamp(34px, 4vw, 56px);
+  font-weight: 400;
+  line-height: 1;
+}
+
+.cv-content p {
+  max-width: 600px;
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.45;
+}
+
+.cv-links {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  margin-top: 28px;
+}
+
+.cv-links a {
+  font-size: 1.2rem;
+  color: #000;
+  text-decoration: none;
+}
+
+.cv-links a:hover {
+  text-decoration: underline;
+}
+
 .education {
   margin-top: 110px;
   padding-bottom: 120px;
@@ -155,12 +199,11 @@
 
 @media (max-width: 768px) {
   .education {
-    margin-top: 80px;
+    margin-top: 60px;
     padding-bottom: 80px;
   }
 
   .education-item {
-    grid-template-columns: 1fr;
     gap: 20px;
     align-items: start;
     padding: 26px 0;

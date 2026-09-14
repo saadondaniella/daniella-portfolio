@@ -19,8 +19,8 @@
 
 .about-content {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 80px;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 45px;
   width: 100%;
   min-height: 80vh;
   margin: 70px 0 0;
@@ -28,18 +28,18 @@
 }
 
 .about-text {
-  max-width: 650px;
+  max-width: 750px;
 }
 
 .about-text p {
   margin: 0 0 24px;
-  font-size: 1.1rem;
-  line-height: 1.45;
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
 
 .about-image {
   width: 100%;
-  height: 600px;
+  height: 720px;
   overflow: hidden;
 }
 

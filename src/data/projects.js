@@ -13,6 +13,9 @@ import capitalQuizPhone2 from "../assets/projects/capital-quiz/capitalquiz-phone
 import cosmoSphereCover from "../assets/projects/cosmo-sphere/cosmosphere.png";
 import cosmoSpherePhone1 from "../assets/projects/cosmo-sphere/cosmosphere-phone1.png";
 import cosmoSpherePhone2 from "../assets/projects/cosmo-sphere/cosmosphere-phone2.png";
+import treatCover from "../assets/projects/treat/treat-desktop.png";
+import treatImage1 from "../assets/projects/treat/treat-phone1.png";
+import treatImage2 from "../assets/projects/treat/treat-phone2.png";
 
 const projects = [
   {
@@ -32,7 +35,31 @@ const projects = [
     image: achiCover,
     mobileImages: [achiPhone1, achiPhone2],
   },
+  {
+    id: 6,
+    slug: "treat",
+    title: "Treat",
+    description:
+      "Pick a mood, choose your pill and make it yours. Apparently we made it pretty well too, because this one took home first place.",
 
+    year: "2026",
+    type: "Desktop",
+    course: "Cross-disciplinary project",
+
+    technologies: ["React", "Three.js", "JavaScript", "GLB", "Figma"],
+
+    url: "DIN-DEPLOY-LÄNK-HÄR",
+    repo: "DIN-GITHUB-LÄNK-HÄR",
+
+    overview:
+      "Treat is an interactive 3D pill configurator created as a cross-disciplinary project together with students from Web Development, Digital Design and Computer Graphics Design. Each discipline brought a different part of the experience to life: the Digital Designers developed the concept, visual identity and user experience, the CG Designers created the 3D models and materials, and we as Web Developers built the interactive configurator and brought everything together in the browser. The experience takes the user through a story-driven flow where they can choose their mood, pill shape, colour and pack size while seeing their choices come to life in 3D. With its playful concept and a different approach to how a configurator can look and work, Treat was awarded Best Project by the jury.",
+
+    solution:
+      "On the development side, we built the configurator in React and integrated the CG team's GLB models using Three.js. The application dynamically switches between different 3D models based on the user's selections, with hover previews, interactive camera views and OrbitControls for exploring the product. Working across three disciplines meant continuously adapting the implementation to both the design and the 3D assets, especially when it came to model positioning, materials, lighting and keeping the experience responsive to every selection. After presenting the finished projects, Treat was selected by the jury as the winning configurator.",
+
+    image: treatCover,
+    mobileImages: [treatImage1, treatImage2],
+  },
   {
     id: 2,
     slug: "capital-quiz",
@@ -104,7 +131,7 @@ const projects = [
     technologies: ["Figma", "PHP", "JavaScript", "HTML", "CSS"],
 
     url: "https://developedbydaniella.se/cosmo-sphere/",
-      repo: "https://github.com/Timalm90/Couples-Therapy.git",
+    repo: "https://github.com/Timalm90/Couples-Therapy.git",
 
     overview:
       "Cosmo Sphere is a fictional sci-fi cinema created during our Digital Design course, where the main focus was on visual identity and the design process. We developed the concept from the ground up, starting with the visual direction and designing the website in Figma before bringing it to life through code. We wanted the website to feel like its own little sci-fi universe rather than a traditional cinema website, using typography, imagery, colour and motion to build the atmosphere. The final website was developed from our Figma designs, with details such as an animated starry background adding another layer to the experience.",

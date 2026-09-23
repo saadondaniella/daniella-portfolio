@@ -130,7 +130,7 @@ const projects = [
 
     technologies: ["Figma", "PHP", "JavaScript", "HTML", "CSS"],
 
-    url: "https://developedbydaniella.se/cosmo-sphere/",
+    url: "https://cosmo-sphere.freedev.app/movie.php",
     repo: "https://github.com/Timalm90/Couples-Therapy.git",
 
     overview:

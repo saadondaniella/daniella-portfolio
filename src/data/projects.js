@@ -131,7 +131,7 @@ const projects = [
     technologies: ["Figma", "PHP", "JavaScript", "HTML", "CSS"],
 
     url: "https://cosmo-sphere.freedev.app/movie.php",
-    repo: "https://github.com/Timalm90/Couples-Therapy.git",
+    repo: "https://github.com/saadondaniella/cosmo-sphere",
 
     overview:
       "Cosmo Sphere is a fictional sci-fi cinema created during our Digital Design course, where the main focus was on visual identity and the design process. We developed the concept from the ground up, starting with the visual direction and designing the website in Figma before bringing it to life through code. We wanted the website to feel like its own little sci-fi universe rather than a traditional cinema website, using typography, imagery, colour and motion to build the atmosphere. The final website was developed from our Figma designs, with details such as an animated starry background adding another layer to the experience.",

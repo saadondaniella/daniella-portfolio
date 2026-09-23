@@ -89,7 +89,7 @@ const projects = [
     type: "Desktop",
     course: "Programming",
     technologies: ["PHP", "SQL", "HTML", "CSS"],
-    url: "https://developedbydaniella.se/yrgopelag/",
+    url: "https://yrgopelag.freedev.app",
     repo: "https://github.com/saadondaniella/theWhiteLotus-yrgopelag",
     overview:
       "Yrgopelag is a full-stack hotel booking system built during our PHP programming course. The project involved much more than displaying available rooms, with booking logic, database management, API integration and calculations for costs and revenue all working together. I built the application using PHP and SQL and worked with structuring the backend logic while keeping the booking flow clear for the user. The project was a good introduction to building a larger application where many different parts depend on each other.",

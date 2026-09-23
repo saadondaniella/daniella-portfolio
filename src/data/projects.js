@@ -48,8 +48,8 @@ const projects = [
 
     technologies: ["React", "Three.js", "JavaScript", "GLB", "Figma"],
 
-    url: "DIN-DEPLOY-LÄNK-HÄR",
-    repo: "DIN-GITHUB-LÄNK-HÄR",
+    url: "https://treat-configurator.vercel.app/",
+    repo: "https://github.com/saadondaniella/configurator",
 
     overview:
       "Treat is an interactive 3D pill configurator created as a cross-disciplinary project together with students from Web Development, Digital Design and Computer Graphics Design. Each discipline brought a different part of the experience to life: the Digital Designers developed the concept, visual identity and user experience, the CG Designers created the 3D models and materials, and we as Web Developers built the interactive configurator and brought everything together in the browser. The experience takes the user through a story-driven flow where they can choose their mood, pill shape, colour and pack size while seeing their choices come to life in 3D. With its playful concept and a different approach to how a configurator can look and work, Treat was awarded Best Project by the jury.",

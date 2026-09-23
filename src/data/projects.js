@@ -130,7 +130,7 @@ const projects = [
 
     technologies: ["Figma", "PHP", "JavaScript", "HTML", "CSS"],
 
-    url: "cosmo-sphere.freedev.app",
+    url: "https://cosmo-sphere.freedev.app",
     repo: "https://github.com/saadondaniella/cosmo-sphere",
 
     overview:

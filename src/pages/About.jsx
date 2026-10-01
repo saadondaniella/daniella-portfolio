@@ -2,10 +2,22 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "./About.css";
 import daniellaImage from "../assets/about/desk.jpg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 function About() {
   const [openEducation, setOpenEducation] = useState(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const section = document.querySelector(location.hash);
+
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }, [location]);
 
   return (
     <>

@@ -1,4 +1,6 @@
 .hero {
+  position: relative;
+  overflow: hidden;
   min-height: 100vh;
   padding: 0 5%;
 }
@@ -86,28 +88,187 @@
   position: absolute;
   z-index: -1;
   width: 115%;
-  height: 150%;
-  right: -25%;
-  bottom: 15%;
-  background: var(--lavender);
-  border-radius: 72% 28% 65% 35% / 35% 62% 38% 65%;
+  height: 185%;
+  right: -24%;
+  bottom: -48%;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 24% 18%,
+      rgb(255 255 255 / 78%) 0 2%,
+      transparent 20%
+    ),
+    radial-gradient(circle at 68% 74%, rgb(182 159 222 / 66%), transparent 40%),
+    linear-gradient(135deg, #e8ddf8 8%, #d4e7e6 45%, #f3d5e4 75%, #cfc1eb);
+  border: 1px solid rgb(255 255 255 / 72%);
+  border-radius: 58% 42% 66% 34% / 36% 58% 42% 64%;
   opacity: 0;
-  transform: rotate(-8deg);
+  box-shadow:
+    inset 24px 20px 44px rgb(255 255 255 / 62%),
+    inset -38px -32px 70px rgb(119 86 166 / 18%),
+    0 34px 90px rgb(155 122 196 / 20%);
+  transform: translate(var(--orb-x, 0px), var(--orb-y, 0px)) rotate(-10deg);
+  transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  cursor: crosshair;
   animation:
     lavenderReveal 5s ease-out forwards,
-    lavenderFloat 22s ease-in-out 5s infinite alternate;
+    lavenderFloat 42s ease-in-out 5s infinite,
+    lavenderPulse 7s ease-in-out 5s infinite;
 }
 
-@keyframes lavenderReveal {
-  from {
-    opacity: 0;
-    transform: scale(0.7) translate(8%, 10%);
-  }
+.lavender-shape::before,
+.lavender-shape::after {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+  pointer-events: none;
+}
 
-  to {
-    opacity: 0.65;
-    transform: scale(1) translate(0, 0);
-  }
+.lavender-shape::before {
+  width: 52%;
+  aspect-ratio: 1;
+  top: -8%;
+  left: 7%;
+  background: rgb(255 255 255 / 35%);
+  filter: blur(24px);
+}
+
+.lavender-shape::after {
+  width: 100%;
+  height: 20%;
+  right: -24%;
+  bottom: 8%;
+  background: rgb(107 75 153 / 14%);
+  filter: blur(28px);
+  transform: rotate(-12deg);
+}
+
+.orb-core,
+.orb-satellite {
+  display: none;
+}
+
+.orb-glow {
+  position: absolute;
+  width: 35%;
+  aspect-ratio: 1;
+  right: 18%;
+  top: 22%;
+  border-radius: 50%;
+  background: #fff;
+  filter: blur(28px);
+  opacity: 0.58;
+}
+
+.orb-core {
+  position: absolute;
+  width: 34%;
+  aspect-ratio: 1;
+  right: 33%;
+  top: 33%;
+  overflow: hidden;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 30% 25%, #fff 0 3%, transparent 16%),
+    radial-gradient(
+      circle at 68% 72%,
+      rgb(193 174 228 / 68%),
+      rgb(255 255 255 / 60%) 70%
+    );
+  border: 1px solid rgb(255 255 255 / 82%);
+  box-shadow:
+    inset 12px 12px 28px rgb(255 255 255 / 58%),
+    0 0 35px rgb(198 175 230 / 30%);
+  animation: orbBreathe 6s ease-in-out infinite;
+}
+
+.orb-core::after {
+  position: absolute;
+  inset: 8%;
+  border: 1px solid rgb(255 255 255 / 40%);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.orb-ring {
+  position: absolute;
+  border: 1px solid rgb(255 255 255 / 78%);
+  border-radius: 50%;
+  transform: rotate(-24deg);
+  pointer-events: none;
+}
+
+.orb-ring-one {
+  width: 160%;
+  height: 46%;
+  left: -30%;
+  top: 28%;
+  box-shadow: 0 0 14px rgb(255 255 255 / 48%);
+}
+
+.orb-ring-two {
+  width: 145%;
+  height: 34%;
+  left: -22%;
+  top: 36%;
+  border-color: rgb(255 255 255 / 82%);
+  opacity: 0.8;
+  transform: rotate(18deg) translateX(4%);
+}
+
+.orb-highlight {
+  position: absolute;
+  width: 24%;
+  aspect-ratio: 1;
+  top: 18%;
+  right: 27%;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 80%);
+  filter: blur(4px);
+  opacity: 0.7;
+}
+
+.orb-satellite {
+  position: absolute;
+  width: 10%;
+  height: 25%;
+  border: 1px solid rgb(255 255 255 / 70%);
+  border-radius: 999px;
+  background: radial-gradient(
+    circle at 30% 25%,
+    #fff 0 4%,
+    #d8c9f3 28%,
+    #b7a6db 100%
+  );
+  box-shadow:
+    inset 7px 7px 12px rgb(255 255 255 / 58%),
+    0 0 22px rgb(183 166 219 / 38%);
+  animation: satelliteGrow 5s ease-in-out infinite;
+}
+
+.orb-satellite-one {
+  right: 25%;
+  top: 12%;
+  transform: rotate(-26deg);
+}
+
+.orb-satellite-two {
+  width: 14%;
+  height: 32%;
+  right: 4%;
+  top: 46%;
+  transform: rotate(32deg);
+  animation-delay: -1.8s;
+}
+
+.orb-satellite-three {
+  width: 8%;
+  height: 22%;
+  right: 38%;
+  top: 69%;
+  transform: rotate(-12deg);
+  animation-delay: -3.2s;
 }
 
 @keyframes lavenderReveal {
@@ -117,28 +278,79 @@
   }
 
   to {
-    opacity: 0.65;
+    opacity: 0.82;
     transform: translate(0, 0) rotate(-8deg) scale(1);
   }
 }
 
 @keyframes lavenderFloat {
   0% {
-    transform: translate(0, 0) rotate(-8deg) scale(1);
+    transform: translate(var(--orb-x, 0px), var(--orb-y, 0px)) rotate(-8deg)
+      scale(0.42);
 
-    border-radius: 72% 28% 65% 35% / 35% 62% 38% 65%;
+    border-radius: 58% 42% 64% 36% / 36% 56% 44% 64%;
   }
 
-  50% {
-    transform: translate(-3%, -2%) rotate(-5deg) scale(1.05);
+  42% {
+    transform: translate(var(--orb-x, 0px), var(--orb-y, 0px)) rotate(-4deg)
+      scale(2.85);
 
-    border-radius: 55% 45% 78% 22% / 65% 32% 68% 35%;
+    border-radius: 43% 57% 72% 28% / 62% 35% 65% 38%;
+  }
+
+  54% {
+    transform: translate(var(--orb-x, 0px), var(--orb-y, 0px)) rotate(-6deg)
+      scale(2.85);
+
+    border-radius: 50% 50% 62% 38% / 42% 58% 42% 58%;
   }
 
   100% {
-    transform: translate(2%, 3%) rotate(-10deg) scale(0.98);
+    transform: translate(var(--orb-x, 0px), var(--orb-y, 0px)) rotate(-12deg)
+      scale(0.42);
 
-    border-radius: 35% 65% 42% 58% / 28% 72% 45% 55%;
+    border-radius: 35% 65% 46% 54% / 30% 70% 42% 58%;
+  }
+}
+
+@keyframes lavenderPulse {
+  0%,
+  100% {
+    box-shadow:
+      inset 18px 18px 40px rgb(255 255 255 / 62%),
+      inset -32px -24px 55px rgb(103 72 151 / 14%),
+      0 30px 75px rgb(155 122 196 / 16%);
+  }
+
+  50% {
+    box-shadow:
+      inset 18px 18px 40px rgb(255 255 255 / 72%),
+      inset -32px -24px 55px rgb(103 72 151 / 18%),
+      0 38px 100px rgb(155 122 196 / 24%);
+  }
+}
+
+@keyframes orbBreathe {
+  0%,
+  100% {
+    transform: scale(0.94) rotate(-8deg);
+  }
+
+  50% {
+    transform: scale(1.06) rotate(3deg);
+  }
+}
+
+@keyframes satelliteGrow {
+  0%,
+  100% {
+    transform: scale(0.72) translate(0, 0);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.18) translate(-5px, -8px);
+    opacity: 1;
   }
 }
 
@@ -290,10 +502,10 @@
 
   .lavender-shape {
     position: absolute;
-    width: 125%;
-    height: 120%;
-    right: -35%;
-    bottom: 0;
+    width: 145vw;
+    height: 160vw;
+    right: -55vw;
+    bottom: -34%;
     z-index: -1;
     pointer-events: none;
   }

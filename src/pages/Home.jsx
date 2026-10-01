@@ -44,7 +44,10 @@ function Home() {
         <div className="intro-left">
           <p>
             Full-stack development student in Gothenburg exploring front-end,
-            back-end and everything in between.
+            back-end and everything in between. I’m currently looking for an
+            internship from November 23, 2026 to May 28, 2027, where I can learn
+            alongside experienced developers, ask plenty of questions and
+            contribute along the way.
           </p>
         </div>
 

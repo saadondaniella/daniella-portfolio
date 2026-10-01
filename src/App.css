@@ -65,6 +65,7 @@
   position: relative;
   margin-top: auto;
   isolation: isolate;
+  transform: translateY(12px);
 }
 
 .hero-title h1 {

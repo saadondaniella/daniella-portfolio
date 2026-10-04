@@ -28,7 +28,8 @@
 
 .nav-links a {
   position: relative;
-  font-size: 20px;
+  font-size: 16px;
+  text-transform: uppercase;
 }
 
 .nav-links a::after {
@@ -230,7 +231,8 @@
 
   .mobile-menu a {
     font-family: "Instrument Serif", serif;
-    font-size: 24px;
+    font-size: 20px;
+    text-transform: uppercase;
   }
 
   .hero {

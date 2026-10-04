@@ -228,7 +228,7 @@ function About() {
 
                 <p>
                   You can view my CV in English or Swedish. Both open as PDFs in
-                  a new tab, where you can download or print them if needed.
+                  a new tab.
                 </p>
               </div>
 

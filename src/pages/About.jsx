@@ -238,7 +238,7 @@ function About() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  English CV
+                  <span>English CV</span>
                 </a>
 
                 <a
@@ -246,7 +246,7 @@ function About() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Swedish CV
+                  <span>Swedish CV</span>
                 </a>
               </div>
             </div>

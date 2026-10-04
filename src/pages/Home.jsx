@@ -65,6 +65,8 @@ function Home() {
         </div>
       </section>
 
+      <Contact />
+
       <section className="projects" id="projects">
         <div className="projects-heading">
           <h2>Selected projects</h2>
@@ -85,7 +87,6 @@ function Home() {
         </div>
       </section>
 
-      <Contact />
       <Footer />
     </main>
   );

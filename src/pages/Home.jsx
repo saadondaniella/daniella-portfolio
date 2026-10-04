@@ -27,8 +27,6 @@ function Home() {
       <section className="hero">
         <div className="hero-content">
           <div className="hero-title">
-            <div className="lavender-shape"></div>
-
             <h1>
               Daniella <span>Saadon</span>
             </h1>

@@ -213,6 +213,10 @@
   border-bottom: var(--border);
 }
 
+.education-item:last-child {
+  border-bottom: 0;
+}
+
 .education-year {
   margin: 0 0 10px;
   font-size: 1rem;

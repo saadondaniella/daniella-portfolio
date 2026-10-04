@@ -94,7 +94,8 @@
 }
 
 .cv-section {
-  margin-top: 110px;
+  margin-top: 40px;
+  margin-bottom: 120px;
 }
 
 .cv-section .project-label {
@@ -103,7 +104,7 @@
 
 .cv-content {
   display: block;
-  padding: 40px 0;
+  padding: 28px 0 0;
 }
 
 .cv-content h2 {
@@ -122,24 +123,79 @@
 
 .cv-links {
   display: flex;
-  flex-direction: row;
-  gap: 32px;
+  flex-wrap: wrap;
+  gap: 22px;
   margin-top: 28px;
 }
 
 .cv-links a {
-  font-size: 1.2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  min-height: 220px;
+  padding: 18px 16px;
+  border: 1px solid rgba(0, 0, 0, 0.72);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.35), rgba(0, 0, 0, 0.02)),
+    linear-gradient(180deg, #f8f5ef 0%, #efe8de 100%);
   color: #000;
+  font-size: 1.15rem;
+  line-height: 1.2;
   text-decoration: none;
+  text-align: center;
+  box-shadow:
+    0 6px 16px rgba(0, 0, 0, 0.08),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.75);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cv-links a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(rgba(65, 52, 35, 0.05) 0.7px, transparent 0.8px),
+    radial-gradient(rgba(255, 255, 255, 0.45) 0.6px, transparent 0.7px);
+  background-size: 8px 8px;
+  background-position:
+    0 0,
+    4px 4px;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.cv-links a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.08) 0%,
+    rgba(0, 0, 0, 0.08) 50%,
+    rgba(0, 0, 0, 0.03) 50%,
+    rgba(0, 0, 0, 0.03) 100%
+  );
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .cv-links a:hover {
-  text-decoration: underline;
+  transform: translateY(-3px);
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.12),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.8);
 }
 
 .education {
-  margin-top: 110px;
-  padding-bottom: 120px;
+  margin-top: 80px;
+  padding-bottom: 40px;
   scroll-margin-top: 110px;
 }
 
@@ -153,7 +209,7 @@
 }
 
 .education-item {
-  padding: 32px 0;
+  padding: 28px 0;
   border-bottom: var(--border);
 }
 
@@ -198,15 +254,38 @@
 }
 
 @media (max-width: 768px) {
+  .cv-links {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .cv-links a {
+    width: 120px;
+    min-height: 150px;
+    padding: 12px 10px;
+    font-size: 0.9rem;
+  }
+
+  .cv-links a::before {
+    width: 14px;
+    height: 14px;
+  }
+
+  .cv-section {
+    margin-top: 28px;
+  }
+
   .education {
-    margin-top: 60px;
-    padding-bottom: 80px;
+    margin-top: 52px;
+    padding-bottom: 60px;
   }
 
   .education-item {
     gap: 20px;
     align-items: start;
-    padding: 26px 0;
+    padding: 24px 0;
   }
 
   .education-item h2 {
